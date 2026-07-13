@@ -15,7 +15,6 @@ app.use(express.json());
 app.use(cors());
 
 // ROUTER
-
 app.use("/api/v1/employee",userRoute)
 
 
