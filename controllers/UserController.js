@@ -2,6 +2,7 @@ import Users from "../models/userModel.js";
 
 export const postEmployee = async (req, res) => {
   try {
+    console.log("DATA:",req.body)
     const { EmailAddress, PhoneNumber, EmployeeID } = req.body;
 
     if (!EmailAddress || !PhoneNumber || !EmployeeID) {
