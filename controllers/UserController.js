@@ -106,7 +106,7 @@ export const getEmployee = async (req, res) => {
 
     const totalEmployee = await Users.countDocuments(query);
 
-    const Employee = await Users.find().sort(sort).skip(skip).limit(limit);
+    const Employee = await Users.find(query).sort(sort).skip(skip).limit(limit);
     res.status(200).json({
       success: true,
       count: Employee.length,
