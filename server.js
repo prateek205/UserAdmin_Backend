@@ -8,11 +8,14 @@ import userRoute from "./routes/UserRoute.js"
 dotenv.config();
 connectDB()
 const PORT = process.env.SERVER_PORT;
+const ADMIN_PORT = process.env.ADMIN_SIDE_PORT
 
 const app = express();
 // MIDDLEWARE
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin:(`http://localhost:${ADMIN_PORT}`)
+}));
 
 // ROUTER
 app.use("/api/v1/employee",userRoute)

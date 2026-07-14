@@ -42,14 +42,20 @@ export const getEmployee = async (req, res) => {
             $regex: req.query.search,
             $options: "i",
           },
+        },
+        {
           LastName: {
             $regex: req.query.search,
             $options: "i",
           },
+        },
+        {
           FullName: {
             $regex: req.query.search,
             $options: "i",
           },
+        },
+        {
           EmployeeID: {
             $regex: req.query.search,
             $options: "i",
