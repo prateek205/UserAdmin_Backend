@@ -138,7 +138,7 @@ export const updateEmployee = async (req, res) => {
         .status(400)
         .json({ success: false, message: "User not found" });
     }
-    res.status(203).json({
+    res.status(200).json({
       success: true,
       message: "User update successfully...",
       employee,
@@ -159,7 +159,7 @@ export const deleteEmployee = async (req, res) => {
         .json({ success: false, message: "User not found" });
     }
 
-    res.status(203).json({
+    res.status(200).json({
       success: true,
       message: "User Deleted Successfully...",
       employee,
