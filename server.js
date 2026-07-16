@@ -10,6 +10,7 @@ connectDB();
 const PORT = process.env.SERVER_PORT;
 // const ADMIN_PORT = process.env.ADMIN_SIDE_PORT;
 const RENDER_ADMIN_URL = process.env.RENDER_URL;
+// console.log("RENDER_URL:",process.env.RENDER_URL)
 
 const app = express();
 // MIDDLEWARE
