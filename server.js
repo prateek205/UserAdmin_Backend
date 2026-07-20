@@ -14,9 +14,11 @@ const RENDER_ADMIN_URL = process.env.RENDER_URL;
 const app = express();
 // MIDDLEWARE
 app.use(express.json());
-app.use(cors({
-  origin: RENDER_ADMIN_URL
-}));
+app.use(
+  cors({
+    origin: "https://useradmin-frontend-15gr.onrender.com",
+  }),
+);
 
 // ROUTER
 app.use("/api/v1/employee", userRoute);
