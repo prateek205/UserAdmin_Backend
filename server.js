@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin:process.env.ADMIN_URL,
+    origin:[process.env.ADMIN_URL],
   }),
 );
 
