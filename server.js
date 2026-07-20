@@ -8,14 +8,14 @@ import userRoute from "./routes/UserRoute.js";
 dotenv.config();
 connectDB();
 const PORT = process.env.SERVER_PORT;
-// const RENDER_ADMIN_URL = process.env.RENDER_URL;
+const RENDER_ADMIN_URL = process.env.RENDER_URL;
 // console.log("Allowed Origin:", process.env.RENDER_URL);
 
 const app = express();
 // MIDDLEWARE
 app.use(express.json());
 app.use(cors({
-  origin: process.env.RENDER_URL
+  origin: RENDER_ADMIN_URL
 }));
 
 // ROUTER
